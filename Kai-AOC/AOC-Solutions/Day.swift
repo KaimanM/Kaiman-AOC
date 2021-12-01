@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Day {
+public protocol Day {
     func part1(input: [Int]) -> Int
     func part2(input: [Int]) -> Int
 }

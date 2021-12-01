@@ -7,8 +7,11 @@
 
 import Foundation
 
-class Day1: Day {
-    func part1(input: [Int]) -> Int {
+public final class Day1: Day {
+
+    public init() {}
+
+    public func part1(input: [Int]) -> Int {
 
         var increaseCount = 0
         var current = input[0]
@@ -20,7 +23,7 @@ class Day1: Day {
         return increaseCount
     }
 
-    func part2(input: [Int]) -> Int {
+    public func part2(input: [Int]) -> Int {
 
         var increaseCount = 0
         var currentAvg = input[0] + input[1] + input[2]

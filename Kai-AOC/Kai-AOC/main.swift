@@ -6,25 +6,13 @@
 //
 
 import Foundation
+import AOC_Solutions
+
 
 final class Kai_AOC {
 
     init() {
         let input = fetchInput(for: 1)
-
-//        let input: String? =
-//                    """
-//                    199
-//                    200
-//                    208
-//                    210
-//                    200
-//                    207
-//                    240
-//                    269
-//                    260
-//                    263
-//                    """
 
         if let input = input {
             let inputArray = input.components(separatedBy: "\n")
