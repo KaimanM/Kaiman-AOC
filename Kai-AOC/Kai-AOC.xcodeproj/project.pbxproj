@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		767C93EB2758CBD00088394C /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C93EA2758CBD00088394C /* Day2.swift */; };
 		76B2021A2756951900D54F61 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B202192756951900D54F61 /* main.swift */; };
 		76B3A7A9275783A700BE2DDA /* AOC_Solutions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B3A7A1275783A600BE2DDA /* AOC_Solutions.framework */; };
 		76B3A7AE275783A700BE2DDA /* AOC_SolutionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B3A7AD275783A700BE2DDA /* AOC_SolutionsTests.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		767C93EA2758CBD00088394C /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
 		76B202162756951900D54F61 /* Kai-AOC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Kai-AOC"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B202192756951900D54F61 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		76B3A7A1275783A600BE2DDA /* AOC_Solutions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AOC_Solutions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,8 +110,9 @@
 		76B3A7A2275783A600BE2DDA /* AOC-Solutions */ = {
 			isa = PBXGroup;
 			children = (
-				76ED3D41275773B4001A5C6F /* Day1.swift */,
 				76ED3D4327577B9B001A5C6F /* Day.swift */,
+				76ED3D41275773B4001A5C6F /* Day1.swift */,
+				767C93EA2758CBD00088394C /* Day2.swift */,
 				76B3A7A3275783A600BE2DDA /* AOC_Solutions.h */,
 			);
 			path = "AOC-Solutions";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B3A7B7275783AD00BE2DDA /* Day.swift in Sources */,
+				767C93EB2758CBD00088394C /* Day2.swift in Sources */,
 				76B3A7B6275783AD00BE2DDA /* Day1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,14 @@
 import Foundation
 
 public final class Day1: Day {
+    let input: [Int]
 
-    public init() {}
+    public init(input: String) {
+        let inputArray = input.components(separatedBy: "\n")
+        self.input = inputArray.compactMap { Int($0) }
+    }
 
-    public func part1(input: [Int]) -> Int {
+    public func part1() -> Int {
 
         var increaseCount = 0
         var current = input[0]
@@ -23,7 +27,7 @@ public final class Day1: Day {
         return increaseCount
     }
 
-    public func part2(input: [Int]) -> Int {
+    public func part2() -> Int {
 
         var increaseCount = 0
         var currentAvg = input[0] + input[1] + input[2]

@@ -12,13 +12,11 @@ import AOC_Solutions
 final class Kai_AOC {
 
     init() {
-        let input = fetchInput(for: 1)
+        let input = fetchInput(for: 2)
 
         if let input = input {
-            let inputArray = input.components(separatedBy: "\n")
-            let inputs = inputArray.compactMap { Int($0) }
-            print("Answer for part 1", Day1().part1(input: inputs))
-            print("Answer for part 2", Day1().part2(input: inputs))
+            print("Answer for part 1", Day2(input: input).part1())
+            print("Answer for part 2", Day2(input: input).part2())
         }
 
     }
@@ -29,7 +27,7 @@ final class Kai_AOC {
         let filePath = folderPath.appendingPathComponent("day\(day).txt").path
 
         if FileManager.default.fileExists(atPath: filePath) {
-            print("File downloaded")
+            print("Input already downloaded")
             return try? String(contentsOfFile: filePath)
         } else {
             return downloadInput(for: day)

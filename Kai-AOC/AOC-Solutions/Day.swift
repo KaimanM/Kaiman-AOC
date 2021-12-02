@@ -8,6 +8,7 @@
 import Foundation
 
 public protocol Day {
-    func part1(input: [Int]) -> Int
-    func part2(input: [Int]) -> Int
+    init(input: String)
+    func part1() -> Int
+    func part2() -> Int
 }
