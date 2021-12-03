@@ -35,30 +35,19 @@ public final class Day3: Day {
             var record = 0
             filteredInput.forEach { record += (Array($0)[currentIndex] == "0" ? -1 : 1) }
             filteredInput = filteredInput.filter { Array($0)[currentIndex] == (record >= 0 ? "1" : "0") }
-            print(filteredInput)
             currentIndex += 1
         }
-
-        print(filteredInput)
-
-        guard let oxygenInput = Int(filteredInput[0], radix: 2) else { return -1 }
-        print(oxygenInput)
-
-        // ---
+        let oxygenInput = Int(filteredInput[0], radix: 2)!
 
         filteredInput = input
         currentIndex = 0
-
         while filteredInput.count > 1 {
             var record = 0
             filteredInput.forEach { record += (Array($0)[currentIndex] == "0" ? 1 : -1) }
             filteredInput = filteredInput.filter { Array($0)[currentIndex] == (record <= 0 ? "0" : "1") }
-            print(filteredInput)
             currentIndex += 1
         }
-
-        guard let co2 = Int(filteredInput[0], radix: 2) else { return -1 }
-        print(co2)
+        let co2 = Int(filteredInput[0], radix: 2)!
 
         return co2*oxygenInput
     }
