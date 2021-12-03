@@ -45,31 +45,13 @@ public final class Day3: Day {
     }
 
     public func part2() -> Int {
-
         var filteredInput: [String] = input
         var currentIndex = 0
 
         while filteredInput.count > 1 {
             var record = 0
-            filteredInput.forEach { line in
-                switch Array(line)[currentIndex] {
-                case "0":
-                    record -= 1
-                default:
-                    record += 1
-                }
-            }
-
-            print(record)
-            switch record {
-            case _ where record < 0:
-                filteredInput = filteredInput.filter { Array($0)[currentIndex] == "0" }
-            case _ where record > 0:
-                filteredInput = filteredInput.filter { Array($0)[currentIndex] == "1" }
-            default:
-                filteredInput = filteredInput.filter { Array($0)[currentIndex] == "1" }
-            }
-
+            filteredInput.forEach { record += (Array($0)[currentIndex] == "0" ? -1 : 1) }
+            filteredInput = filteredInput.filter { Array($0)[currentIndex] == (record >= 0 ? "1" : "0") }
             print(filteredInput)
             currentIndex += 1
         }
@@ -86,27 +68,8 @@ public final class Day3: Day {
 
         while filteredInput.count > 1 {
             var record = 0
-            filteredInput.forEach { line in
-                switch Array(line)[currentIndex] {
-                case "0":
-                    record += 1
-                default:
-                    record -= 1
-                }
-
-
-            }
-
-            print(record)
-            switch record {
-            case _ where record < 0:
-                filteredInput = filteredInput.filter { Array($0)[currentIndex] == "0" }
-            case _ where record > 0:
-                filteredInput = filteredInput.filter { Array($0)[currentIndex] == "1" }
-            default:
-                filteredInput = filteredInput.filter { Array($0)[currentIndex] == "0" }
-            }
-
+            filteredInput.forEach { record += (Array($0)[currentIndex] == "0" ? 1 : -1) }
+            filteredInput = filteredInput.filter { Array($0)[currentIndex] == (record <= 0 ? "0" : "1") }
             print(filteredInput)
             currentIndex += 1
         }
