@@ -19,15 +19,11 @@ public final class Day3: Day {
         var array = [Int](repeating: 0, count: input[0].count)
         input.forEach { line in
             line.enumerated().forEach { index, element in
-                if let binary = Int(String(element)) {
-                    switch binary {
-                    case 0:
-                        array[index] -= 1
-                    case 1:
-                        array[index] += 1
-                    default:
-                        break
-                    }
+                switch element {
+                case "0":
+                    array[index] -= 1
+                default:
+                    array[index] += 1
                 }
             }
         }
