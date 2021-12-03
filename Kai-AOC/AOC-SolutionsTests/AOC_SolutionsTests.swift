@@ -76,4 +76,45 @@ class AOC_SolutionsTests: XCTestCase {
         XCTAssertEqual(Day2(input: input).part2(), 900)
     }
 
+    // MARK: - DAY 3 -
+    func test_day3_part1() {
+        let input =
+                """
+                00100
+                11110
+                10110
+                10111
+                10101
+                01111
+                00111
+                11100
+                10000
+                11001
+                00010
+                01010
+                """
+
+        XCTAssertEqual(Day3(input: input).part1(), 198)
+    }
+
+    func test_day3_part2() {
+        let input =
+                """
+                00100
+                11110
+                10110
+                10111
+                10101
+                01111
+                00111
+                11100
+                10000
+                11001
+                00010
+                01010
+                """
+
+        XCTAssertEqual(Day3(input: input).part2(), 230)
+    }
+
 }

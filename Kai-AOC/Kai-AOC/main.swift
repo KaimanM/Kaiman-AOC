@@ -12,11 +12,11 @@ import AOC_Solutions
 final class Kai_AOC {
 
     init() {
-        let input = fetchInput(for: 2)
+        let input = fetchInput(for: 3)
 
         if let input = input {
-            print("Answer for part 1", Day2(input: input).part1())
-            print("Answer for part 2", Day2(input: input).part2())
+//            print("Answer for part 1", Day3(input: input).part1())
+            print("Answer for part 2", Day3(input: input).part2())
         }
 
     }
