@@ -16,32 +16,15 @@ public final class Day3: Day {
     }
 
     public func part1() -> Int {
-        var array = [Int](repeating: 0, count: input[0].count)
+        var result = [Int](repeating: 0, count: input[0].count)
         input.forEach { line in
-            line.enumerated().forEach { index, element in
-                switch element {
-                case "0":
-                    array[index] -= 1
-                default:
-                    array[index] += 1
-                }
-            }
+            line.enumerated().forEach { result[$0] += ($1 == "0" ? -1 : 1) }
         }
 
-        let gamma = array.map { num -> String in
-            if (num < 0) { return "0" } else { return "1" }
-        }.joined()
+        let gamma = result.map { $0 < 0 ? "0" : "1" }.joined()
+        let epsilon = result.map { $0 < 0 ? "1" : "0" }.joined()
 
-        let epsilon = array.map { num -> String in
-            if (num < 0) { return "1" } else { return "0" }
-        }.joined()
-
-        guard let gammaDecimal = Int(gamma, radix: 2),
-              let epsilonDecimal = Int(epsilon, radix: 2) else {
-                  return -1
-              }
-
-        return gammaDecimal * epsilonDecimal
+        return Int(gamma, radix: 2)! * Int(epsilon, radix: 2)!
     }
 
     public func part2() -> Int {
