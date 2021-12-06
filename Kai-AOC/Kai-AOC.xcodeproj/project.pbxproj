@@ -16,6 +16,7 @@
 		76B3A7B6275783AD00BE2DDA /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ED3D41275773B4001A5C6F /* Day1.swift */; };
 		76B3A7B7275783AD00BE2DDA /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ED3D4327577B9B001A5C6F /* Day.swift */; };
 		76B3A7B92757848100BE2DDA /* AOC_Solutions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B3A7A1275783A600BE2DDA /* AOC_Solutions.framework */; };
+		76D57767275E2E2900197B77 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D57766275E2E2900197B77 /* Day6.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		76B3A7A3275783A600BE2DDA /* AOC_Solutions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOC_Solutions.h; sourceTree = "<group>"; };
 		76B3A7A8275783A700BE2DDA /* AOC-SolutionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AOC-SolutionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B3A7AD275783A700BE2DDA /* AOC_SolutionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOC_SolutionsTests.swift; sourceTree = "<group>"; };
+		76D57766275E2E2900197B77 /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 		76ED3D41275773B4001A5C6F /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
 		76ED3D4327577B9B001A5C6F /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 				76ED3D41275773B4001A5C6F /* Day1.swift */,
 				767C93EA2758CBD00088394C /* Day2.swift */,
 				7624F5C0275A1B8600D1DEF4 /* Day3.swift */,
+				76D57766275E2E2900197B77 /* Day6.swift */,
 				76B3A7A3275783A600BE2DDA /* AOC_Solutions.h */,
 			);
 			path = "AOC-Solutions";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B3A7B7275783AD00BE2DDA /* Day.swift in Sources */,
+				76D57767275E2E2900197B77 /* Day6.swift in Sources */,
 				767C93EB2758CBD00088394C /* Day2.swift in Sources */,
 				7624F5C1275A1B8600D1DEF4 /* Day3.swift in Sources */,
 				76B3A7B6275783AD00BE2DDA /* Day1.swift in Sources */,
