@@ -35,17 +35,12 @@ public final class Day6: Day {
 
     func calculateSpawn(on: [Int], for days: Int) -> [Int] {
         var fish = on
-        var result: [Int] = []
         for _ in 0...days-1 {
-//            print("start \(i): ", fish)
             let newFishCount = fish[0]
-            result = fish
-            result.removeFirst()
-            result.append(0)
-            result[6] = result[6] + newFishCount
-            result[8] = newFishCount
-//            print(result.reduce(0, +))
-            fish = result
+            fish.removeFirst()
+            fish.append(0)
+            fish[6] = fish[6] + newFishCount
+            fish[8] = newFishCount
         }
         return fish
     }
