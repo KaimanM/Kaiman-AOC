@@ -172,6 +172,43 @@ class AOC_SolutionsTests: XCTestCase {
         XCTAssertEqual(Day4(input: input).part2(), 1924)
     }
 
+    // MARK: - DAY 5 -
+    func test_day5_part1() {
+        let input =
+                """
+                0,9 -> 5,9
+                8,0 -> 0,8
+                9,4 -> 3,4
+                2,2 -> 2,1
+                7,0 -> 7,4
+                6,4 -> 2,0
+                0,9 -> 2,9
+                3,4 -> 1,4
+                0,0 -> 8,8
+                5,5 -> 8,2
+                """
+
+        XCTAssertEqual(Day5(input: input).part1(), 5)
+    }
+
+    func test_day5_part2() {
+        let input =
+                """
+                0,9 -> 5,9
+                8,0 -> 0,8
+                9,4 -> 3,4
+                2,2 -> 2,1
+                7,0 -> 7,4
+                6,4 -> 2,0
+                0,9 -> 2,9
+                3,4 -> 1,4
+                0,0 -> 8,8
+                5,5 -> 8,2
+                """
+
+        XCTAssertEqual(Day5(input: input).part2(), 1924)
+    }
+
     // MARK: - DAY 6 -
     func test_day6_part1() {
         let input =
