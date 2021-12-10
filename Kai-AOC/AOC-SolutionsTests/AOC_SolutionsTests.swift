@@ -206,7 +206,7 @@ class AOC_SolutionsTests: XCTestCase {
                 5,5 -> 8,2
                 """
 
-        XCTAssertEqual(Day5(input: input).part2(), 1924)
+        XCTAssertEqual(Day5(input: input).part2(), 12)
     }
 
     // MARK: - DAY 6 -
