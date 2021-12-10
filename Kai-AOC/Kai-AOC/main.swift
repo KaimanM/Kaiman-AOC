@@ -16,7 +16,7 @@ final class Kai_AOC {
 
         if let input = input {
             print("Answer for part 1", Day4(input: input).part1())
-//            print("Answer for part 2", Day4(input: input).part2())
+            print("Answer for part 2", Day4(input: input).part2())
         }
 
     }

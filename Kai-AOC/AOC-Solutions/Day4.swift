@@ -75,7 +75,7 @@ public final class Day4: Day {
     }
 
     func checkRows(on board: [Int]) -> Bool {
-    print("check rows called")
+//    print("check rows called")
         return board[0...4].allSatisfy({ $0 == -1}) ||
         board[5...9].allSatisfy({ $0 == -1}) ||
         board[10...14].allSatisfy ({ $0 == -1}) ||
@@ -84,7 +84,7 @@ public final class Day4: Day {
     }
 
     func checkColumns(on board: [Int]) -> Bool {
-        print("check cols called")
+//        print("check cols called")
         let indexes = [0, 5, 10, 15, 20,
                        1, 6, 11, 16, 21,
                        2, 7, 12, 17, 22,
@@ -112,28 +112,36 @@ public final class Day4: Day {
     public func part2() -> Int {
         var boardsCopy = boards
         for number in gameNumbers {
+            var boardsToRemove: [Int] = []
             for i in 0..<boardsCopy.count {
                 if boardsCopy[i].contains(number) {
                     boardsCopy[i][boardsCopy[i].firstIndex(of: number)!] = -1
-                    if checkForWin(on: boardsCopy[i]) && boardsCopy.count != 1 {
+                    if checkForWin(on: boardsCopy[i]) && boardsCopy.count == 1 {
                         print("@@@@ ENDED ON NUMBER :", number)
-                        printBoard(boards[i])
-                        let value = boards[i].compactMap {
+                        printBoard(boardsCopy[i])
+                        let value = boardsCopy[i].compactMap {
                             $0 == -1 ? nil : $0
                         }
                             .reduce(0, +)
 
                         return value*number
                     } else if checkForWin(on: boardsCopy[i]) {
-                        print("REMOVING BOARD: ", i)
-                        boardsCopy.remove(at: i)
+                        print("PENDING DELETE BOARD: ", i)
+//                        boardsCopy.remove(at: i)
+                        boardsToRemove.append(i)
                     }
                 }
             }
 
+
+            boardsToRemove.sorted(by: >).forEach {
+                print("REMOVING BOARD: ", $0)
+                boardsCopy.remove(at: $0)
+            }
+
             print("@@@@@")
             print("After \(number) was called the boards are: ")
-            for (n, board) in boards.enumerated() {
+            for (n, board) in boardsCopy.enumerated() {
                 print("BOARD ", n)
                 printBoard(board)
             }
